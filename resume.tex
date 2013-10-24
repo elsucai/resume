@@ -1,0 +1,384 @@
+% Xiang Cai's Resume
+% Created: Oct. 22 2010
+% Last Modified: Oct. 24 2013
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage{verbatim}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=false,linkcolor=black]{hyperref}
+\def\pdfBorderAttrs{/Border [0 0 0] } 
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Xiang Cai}
+\newcommand{\addrlinea}{29 Millbrook Drive}
+\newcommand{\addrlineb}{Stony Brook, NY 11790, USA}
+\newcommand{\phone}{\textit{Mobile: }(631)680-8544}
+\newcommand{\email}{\textit{Email: }xcai.stonybrook@gmail.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% This defines contact info style
+\newcommand{\contact}[1]{
+	\begin{flushleft}\fontfamily{phv}\selectfont\Huge\Large#1\end{flushleft}
+}
+
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% Same as ressubsec, but no item is required
+\newenvironment{ressubsec_empty}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+}
+
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+%\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+\contact{Contact Information}
+
+\begin{table}[h]
+\begin{tabular}[h]{p{0.5\textwidth}p{0.5\textwidth}}
+\addrlinea & \phone \\
+\addrlineb & \email \\
+\end{tabular}
+\end{table}
+
+\begin{ressection}{Objective}
+
+	\resitem{Obtain a full time job in the area of Software Engineering}
+
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+	\begin{ressubsec}{Stony Brook University}{Stony Brook, NY}{\textbf{Ph.D.} candidate
+		in Computer Science(GPA:3.93/4): Sep. 2007- Present}
+		\ressubitem{Research was focused on Network Security and System Security
+		%	\begin{small}
+		%		\textit{} 
+		%	\end{small}
+		}
+		
+%		\ressubitem{Core Courses:
+%			\begin{small}
+%				\textit{Operating Systems; Analysis of Algorithms; Theory of
+%					Computation; Theory of Database Systems; Fundamental of
+%						Computer Networks} 
+%			\end{small}
+%		}
+%		\ressubitem{Candidate Exam Report:
+	%		\href{http://docs.google.com/fileview?id=0Byne4VTOYpXPMGFjMzM5NWQtZWNiMC00M2Y2LThiNjktOTdmNjk4ODY2N2Rm&hl=en}
+	%		{
+%			\begin{small}
+%				\textit{Type based Security Verification and Program Transformation}
+%			\end{small}
+%			}
+%		}                                                                     
+	\end{ressubsec}
+
+	\begin{ressubsec_empty}{University of Sciences \& Technology of
+		China(USTC)}{Hefei, Anhui, China}{\textbf{B.E.} in Computer
+			Science(GPA:3.83/4.3): Sep. 2003 - July. 2007}
+	\end{ressubsec_empty}
+
+
+\end{ressection}
+
+
+\begin{ressection}{Technical Skills}
+	\resitem{
+		Programming Languages: \textbf{C/C++ }(proficient, 3+ years of experience), \textbf{Java} (familiar), \textbf{python} (beginner)
+	}
+	\resitem{Broad and diversified background in \textbf{System Programming},
+		\textbf{Algorithms}, \textbf{Software Development} and
+			\textbf{Computer Security}. Specialization in \textbf{System
+				Security} and \textbf{Network Security}. Excellent troubleshooting/problem solving skills.
+	}
+
+\end{ressection}
+
+
+\begin{ressection}{Working Experience}
+	\begin{ressubsec}{Hewlett-Packard Labs}{Princeton, NJ}{Research Associate Internship: June 2012 -- August 2012}
+		\begin{small}
+			\resitem{Conduct large scale data analysis on passive DNS traffic to find malicious command-and-control servers.}
+		\end{small}
+	\end{ressubsec}
+\end{ressection}
+
+
+\begin{ressection}{Research Projects}
+
+	\resitem{\textbf{Websites fingerprinting attacks on Tor. May.
+		2011. [C++/Java/ruby/MYSQL]} 
+		\begin{small}
+		Proposed and implemented two new website fingerprinting
+			attacks on the Tor anonymity system. Our web page
+			classifier was novel in that, unlike all previous
+			classifiers, it completely ignored packet sizes. Despite
+			its simplicity, our attack outperformed 
+			recently-published fingerprinting attacks on Tor. \textbf{Source code can be found at git@github.com:xiang-cai/fingerprinting\_attack\_code.git}
+		\end{small}				
+	}
+
+	\resitem{\textbf{A novel machine registration procedure. Dec.
+		2010. [PHP/MYSQL]}
+		\begin{small}
+		Designed a novel online machine
+			registration system. Users can register their computers to
+			certain service providers (e.g. Banks, SNS websites) by
+			visiting the registration website and then following specific
+			instructions. This new process is as simple as most existing
+			machine registration procedures yet more secure. Phishing and MITM attacks against the
+			system are almost impossible.
+		\end{small}	
+	}
+			
+	\resitem{\textbf{A C library for serializable file-system
+				accessing. Feb. 2010. [C/C++/Shell]} 
+		\begin{small}
+		Proposed and implemented an
+					easy-to-use, portable, provably-secure system for
+					accessing UNIX file-systems without race conditions
+					and that supported arbitrary sequences of operations
+					within each pseudo-transaction and which had
+					negligible overhead on a mail-server
+					benchmark. \textbf{Source code can be found at git@github.com:xiang-cai/trace.git}
+		\end{small}
+	}
+	
+	\resitem{\textbf{Race attack on Unix File-Systems. Oct. 2008. [C/Shell]}
+		\begin{small}
+		Defeated two proposed Unix file-system race
+			condition defense mechanisms. We argued that all
+			kernel-based dynamic race detectors must have a model of
+			the programs they protect or provide imperfect
+			protection. \textbf{Source code can be found at git@github.com:xiang-cai/race\_attack.git}
+		\end{small}
+	} 
+
+
+%	\begin{ressubsec}{Stony Brook University, Computer Science
+%		Department}{Stony Brook, NY}{Research Assistant under \textbf{Prof. Rob
+%			Johnson}: Summer 2008--present}
+%		\begin{small}	
+%
+%			\resitem{\textbf{Websites fingerprinting attacks on Tor. May.
+%				2011}. 
+%				\begin{small}
+%				Proposed and implemented two new website fingerprinting
+%					attacks on the Tor anonymity system. Our web page
+%					classifier was novel in that, unlike all previous
+%					classifiers, it completely ignored packet sizes. Despite
+%					its simplicity, our attack outperformed 
+%					recently-published fingerprinting attacks on Tor.
+%					(C++/Java/ruby/MYSQL)
+%				\end{small}				
+%			}
+%
+%			\resitem{\textbf{A novel machine registration procedure. Dec.
+%				2010}. 
+%				\begin{small}
+%				Designed a novel online machine
+%					registration system. Users can register their computers to
+%					certain service providers (e.g. Banks, SNS websites) by
+%					visiting the registration website and then following specific
+%					instructions. This new process is as simple as most existing
+%					machine registration procedures yet more secure. Phishing and MITM attacks against the
+%					system are almost impossible. (PHP/MYSQL)
+%				\end{small}	
+%			}
+%					
+%			\resitem{\textbf{A C library for serializable file-system
+%						accessing. Feb. 2010}. 
+%				\begin{small}
+%				Proposed and implemented an
+%							easy-to-use, portable, provably-secure system for
+%							accessing UNIX file-systems without race conditions
+%							and that supported arbitrary sequences of operations
+%							within each pseudo-transaction and which had
+%							negligible overhead on a mail-server
+%							benchmark.(C/C++/Shell)
+%				\end{small}
+%			}
+%			
+%			\resitem{\textbf{Race attack on Unix File-Systems. Oct. 2008}.
+%				\begin{small}
+%				Defeated two proposed Unix file-system race
+%					condition defense mechanisms. We argued that all
+%					kernel-based dynamic race detectors must have a model of
+%					the programs they protect or provide imperfect
+%					protection.(C/Shell)
+%				\end{small}
+%			} 
+%		\end{small}
+%	\end{ressubsec}
+
+
+%	\begin{ressubsec}{University of Sciences \& Technology of China}{National
+%		High Performance Computing Center , Hefei, Anhui, China}{Undergraduate
+%			Students Research Program, under \textbf{Prof. Liusheng Huang}:
+%				July. 2006--Oct. 2006}
+%		\begin{small}
+%			\resitem{\textbf{Explored existing MAC protocols for Wireless Sensor Networks.}}
+%	    	\resitem{\textbf{Optimized the performance of existing protocols under certain conditions.}}
+%		\end{small}
+%	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Selected Course Projects}
+
+	\resitem{\textbf{Very Simple Real File-System, Dec. 2008. [C/Kernel Programming]} 
+		\begin{small}
+		Implemented a very simple file-system with a group of 3 people, which supported regular file operations such as create, open, close, lookup, link, delete, etc.
+		\end{small}
+	}
+
+	\resitem{\textbf{Linux Stackable File-system, Nov. 2008. [C/Kernel Programming]} 
+		\begin{small}
+		Implemented a stackable file system in Linux with a group of three people, which supported transparent
+			file integrity checking.
+		\end{small}
+	}
+
+	\resitem{\textbf{Adding A System Call To The Linux Kernel, Oct. 2008. [C/Kernel Programming]}
+		\begin{small}
+		Implemented a system call by adding a module to the Linux kernel (2.6.3.26), which can insert and delete data at user
+			specified positions within a regular file.
+		\end{small}		
+	}
+
+	\resitem{\textbf{WEP Cracking Project, Dec. 2007. [Java/C]} 
+		\begin{small}
+		Hacked and broke into a
+		128 bit WEP protected wireless network by sniffing the headers of the packets being transmitted.
+		\end{small}
+	}
+\end{ressection}
+
+\begin{ressection}{Invited Talks}
+	\resitem{\textbf{Touching from a Distance: Website Fingerprinting
+		Attacks and Defenses.} \begin{small} \textbf{Xiang Cai}, Xincheng Zhang
+			and Rob Johnson. \textit{Invited talk to Symantec Research Labs. September 25th, 2012}.
+		\end{small}}
+\end{ressection}
+
+\begin{ressection}{Academic Activities}
+	\resitem{\textbf{Security and Communication Networks 2013, } \begin{small}Journal reviewer.\end{small}
+	}
+\end{ressection}
+
+\begin{ressection}{Publications}
+
+	\resitem{\textbf{Touching from a Distance: Website Fingerprinting
+		Attacks and Defenses.} \begin{small} \textbf{Xiang Cai}, Xincheng Zhang
+			and Rob Johnson. \textit{ACM Conference on Computer and Communications Security, Raleigh, NC, October 2012}.					\end{small}}
+
+	\resitem{\textbf{Fixing Races For Good: Serializable File-System
+		Access for UNIX.} \begin{small} \textbf{Xiang Cai}, Rucha Lale,
+		Xincheng Zhang and Rob Johnson. Submitted to \textit{Transactions on Storage 2012}.\end{small}}
+
+	\resitem{\textbf{Exploiting Unix File-System Races via Algorithmic
+		Complexity Attacks.} \begin{small} \textbf{Xiang Cai}, Yuwei Gui, and
+			Rob Johnson. \textit{IEEE Symposium on Security and Privacy,
+				Oakland, CA, May 2009}.\end{small}}
+
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Awards}
+\resitem{\begin{small}Sep. 2007 New Graduate students Fellowship, Stony Brook University.\end{small}}
+\resitem{\begin{small}Oct. 2006, Citigroup-CSTS Excellent Scholarship for undergraduate students.\end{small}}
+\resitem{\begin{small}Oct. 2005, San Pu scholarship for undergraduate students.\end{small}}
+\resitem{\begin{small}October 2004, Outstanding Student Scholarship (Grade 2), USTC.\end{small}}
+\resitem{\begin{small}Nov. 2003, Second place in the English Debate Competition of USTC.\end{small}}
+\end{ressection}
+\end{comment}
+
+\end{document}
