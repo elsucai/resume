@@ -68,7 +68,7 @@
 \newcommand{\resbigitem}[3]{
 	\vspace{-5pt}
 	\item
-	\textbf{#1}---#2 \\
+	\textbf{#1} --- #2 \\
 	\textit{#3}
 }
 
@@ -131,13 +131,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Education}
 
-	\begin{ressubsec}{Stony Brook University}{Stony Brook, NY}{\textbf{Ph.D.} candidate
-		in Computer Science(GPA:3.93/4): Expected May 2014}
-		\ressubitem{Research focused on \textbf{Network Security} and \textbf{System Security}
-		%	\begin{small}
-		%		\textit{} 
-		%	\end{small}
-		}
+	\begin{ressubsec_empty}{Stony Brook University}{Stony Brook, NY}{\textbf{Ph.D.} candidate
+		in Computer Science(GPA:3.93/4) \hfill \textbf{Expected May 2014}}	
 		
 %		\ressubitem{Core Courses:
 %			\begin{small}
@@ -154,14 +149,22 @@
 %			\end{small}
 %			}
 %		}                                                                     
-	\end{ressubsec}
+	\end{ressubsec_empty}
+
+	\vspace{2pt}
 
 	\begin{ressubsec_empty}{University of Sciences \& Technology of
 		China(USTC)}{Hefei, Anhui, China}{\textbf{B.E.} in Computer
-			Science(GPA:3.83/4.3): July 2007}
+			Science(GPA:3.83/4.3) \hfill \textbf{July 2007}}
 	\end{ressubsec_empty}
 
 
+\end{ressection}
+
+\begin{ressection}{Research Interests}
+	\resitem{
+		System Security, Network Security and Privacy.
+	}
 \end{ressection}
 
 
@@ -186,7 +189,7 @@
 
 
 \begin{ressection}{Working Experience}
-	\begin{ressubsec}{Hewlett-Packard Labs}{Princeton, NJ}{Research Associate Internship: June 2012 -- August 2012}
+	\begin{ressubsec}{Hewlett-Packard Labs}{Princeton, NJ}{Research Associate Internship \hfill \textbf{June 2012 -- August 2012}}
 		\begin{small}
 			\resitem{Conduct large scale data analysis on passive DNS traffic to find malicious command-and-control servers.}
 		\end{small}
