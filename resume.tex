@@ -5,6 +5,7 @@
 \documentclass[11pt,oneside]{article}
 \usepackage{geometry}
 \usepackage{verbatim}
+\usepackage{xspace}
 \usepackage[T1]{fontenc}
 \usepackage[colorlinks=false,linkcolor=black]{hyperref}
 \def\pdfBorderAttrs{/Border [0 0 0] } 
@@ -18,11 +19,13 @@
 \setlength{\tabcolsep}{0in}
 
 % Name and contact information
-\newcommand{\name}{Xiang Cai}
-\newcommand{\addrlinea}{29 Millbrook Drive}
-\newcommand{\addrlineb}{Stony Brook, NY 11790, USA}
-\newcommand{\phone}{\hfill \textit{Mobile: }(631)680-8544}
-\newcommand{\email}{\hfill \textit{Email: }xcai@cs.stonybrook.edu}
+\newcommand{\name}{Xiang Cai\xspace}
+\newcommand{\addrlinea}{29 Millbrook Drive\xspace}
+\newcommand{\addrlineb}{Stony Brook, NY 11790, USA\xspace}
+\newcommand{\phone}{\hfill \textit{Mobile: }(631)680-8544\xspace}
+\newcommand{\email}{\hfill \textit{Email: }xcai@cs.stonybrook.edu\xspace}
+\newcommand{\cvphone}{\textit{(631)680-8544}\xspace}
+\newcommand{\cvemail}{\textit{xcai@cs.stonybrook.edu}\xspace}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,6 +107,71 @@
 \begin{document}
 
 \fontfamily{ppl} \selectfont
+
+%\begin{comment}
+% begin coverletter
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{8 pt}
+
+\begin{center}
+\addrlinea \\
+\addrlineb \\
+\cvphone \\
+\end{center}
+
+\vspace{30pt}
+
+December 12, 2013
+
+\vspace{8pt}
+Recruitment Team
+
+\textit{Company, Inc.}
+
+\textit{address}
+
+\vspace{30pt}
+Dear Hiring Executive,
+
+\vspace{8pt}
+I am writing in response to your recent advertisement for a Research Scientist
+position (job id \#12345) on your website. Based on my background and experience, I believe I am
+a strong candidate for the position.
+
+\vspace{8pt}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{p{10cm}p{1cm}p{10cm}}
+\textbf{YOUR NEEDS}	&	&	\textbf{MY QUALIFICATION}	\\
+a	&	&	aa	\\
+b	&	&	bb	\\
+
+\end{tabular}
+\end{table}
+
+\vspace{8pt}
+Thank you for your considerations. If you would like to discuss further about
+my qualifications, please do not hesitate to contact me via email at 
+\cvemail  or via telephone at \cvphone. I look forward to
+talking with you!
+
+\vspace{8pt}
+Sincerely yours,
+
+\vspace{30pt}
+Xiang Cai
+
+\vspace{30pt}
+\textit{Attached: resume}
+
+\newpage
+
+% end of coverletter
+%\end{comment}
 
 % Name with horizontal rule
 \bigname{\name}
