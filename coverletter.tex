@@ -1,0 +1,98 @@
+% Xiang Cai's Resume
+% Created: Oct. 22 2010
+% Last Modified: Dec. 7 2013
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage{verbatim}
+\usepackage{xspace}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=false,linkcolor=black]{hyperref}
+\def\pdfBorderAttrs{/Border [0 0 0] } 
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Xiang Cai\xspace}
+\newcommand{\addrlinea}{29 Millbrook Drive\xspace}
+\newcommand{\addrlineb}{Stony Brook, NY 11790, USA\xspace}
+\newcommand{\phone}{(631)680-8544\xspace}
+\newcommand{\email}{xcai@cs.stonybrook.edu\xspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{8 pt}
+
+\begin{center}
+\addrlinea \\
+\addrlineb \\
+\phone \\
+\end{center}
+
+\vspace{30pt}
+
+December 12, 2013
+
+\vspace{8pt}
+Recruitment Team
+
+\textit{Company, Inc.}
+
+\textit{address}
+
+\vspace{30pt}
+Dear Hiring Executive,
+
+\vspace{8pt}
+I am writing in response to your recent advertisement for a Research Scientist
+position (job id \#12345) on your website. Based on my background and experience, I believe I am
+a strong candidate for the position.
+
+\vspace{8pt}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{p{10cm}p{1cm}p{10cm}}
+\textbf{YOUR NEEDS}	&	&	\textbf{MY QUALIFICATION}	\\
+a	&	&	aa	\\
+b	&	&	bb	\\
+
+\end{tabular}
+\end{table}
+
+\vspace{8pt}
+Thank you for your considerations. If you would like to discuss further about
+my qualifications, please do not hesitate to contact me via email at 
+\email  or via telephone at 631-680-8544. I look forward to
+talking with you!
+
+\vspace{8pt}
+Sincerely yours,
+
+\vspace{30pt}
+Xiang Cai
+
+\vspace{30pt}
+\textit{Attached: curriculum vitae}
+\end{document}
