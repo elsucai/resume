@@ -1,0 +1,34 @@
+\documentclass[11pt,oneside]{article}
+
+\usepackage{geometry}
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{comment}
+
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\begin{document}
+
+\title{Research Statement}
+\author{Xiang Cai}
+\maketitle
+
+\section{Introduction}
+
+The Internet has become an important part in many people's everyday life, and it has also changed the way people used to live. We fetch news by browsing websites rather than reading the newspaper, chat with friends on social networks, and manage bank accounts online, etc. We embrace the great conveniences these services bring us, but at the same time, we have to face the inevitable problems that come with them -- network security and user privacy. There are many cyber attacks that can jeopardize online security and privacy. E.g, phishing websites can trick you to reveal your passwords, social engineering attacks may link your online account to your real life identity, etc.
+
+One such attack is called a website fingerprinting attack \cite{hintz-pets02}, which enables an adversary to infer which website a victim is visiting, even if the victim uses an encrypting proxy, such as Tor \cite{tor-website}. Encrypting transferred data can hide the data itself, but still reveals other information, e.g. packet sizes, timing, and directions of packets, etc. In a website fingerprinting attack, an adversary analyzes these features, and attempts to infer the web page being visited by a victim. This attack scenario only requires an adversary to be able to eavesdrop, which is hard to be detected by a victim, yet can cause serious privacy issues. It has been shown that web page fingerprinting attacks are possible against many privacy services, including IPSec tunnels, SSH tunnels, and Tor. As a result, many researchers have stepped into the battlefield of developing website fingerprinting attacks and defenses. It is interesting to know that who will win this battle, and what are the prices the winner has to pay. E.g. whether a defender has to suffer a huge bandwidth cost to prevent information leakage, or an attack needs too much computing power than feasible to get what he wants. My research tries answer these questions by thoroughly analyzing this type of attack, and building real attack and defense systems to evaluate their impacts in reality.
+
+\section{Previous and Ongoing Work}
+
+
+
+\section{Future Research}
+
+
+\bibliographystyle{plain}
+\bibliography{xiang}
+
+\end{document}
+
+
