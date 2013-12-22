@@ -7,6 +7,10 @@
 \usepackage{url}
 \usepackage{comment}
 
+\newcommand{\buflo} {BuFLO\xspace}
+\newcommand{\csbuflo} {Congestion-Sensitive BuFLO\xspace}
+\newcommand{\csb} {CS-BuFLO\xspace}
+
 \geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
 
 \begin{document}
@@ -32,19 +36,78 @@ data packets are simply padded to a multiple of the block size (typically 16 byt
 a multiple of 512 bytes, providing much less information. However, the attacker can observe more things from the traffic other than just packet sizes, e.g. the order of packets exchanged between the user and the proxy. We believe a better attacker exists if he utilizes all what he observed.
 
 % dlsvm
-Web pages can consist of multiple objects, such as HTML files, images, and flash objects, and browsers send separate requests for each object. There is some inherent stability in the ordering of requests: browsers cannot request an object until they have received the portion of a page that references it. These facts suggest a simple representation for the attacker's traffic observations, and a similarity metric the attacker can use to compare traces.  We developed a web site fingerprinting attack DLSVM \cite{cai-ccs12}, which represents a trace of $\ell$ packets as a vector $t=(d_1, \ldots, d_\ell)$, where $d_i=\pm s_i$, where $s_i$ is the size of the $i$th packet and the sign indicates the direction of the packet.  Our attack compares traces $t$ and $t'$ using the Damerau-Levenshtein edit distance~\cite{navarro-acmcs01}, which is the length of the shortest sequence of character insertions, deletions, substitutions, and transpositions required to transform $t$ into $t'$. In the context of our packet traces, these edits correspond to packet and request re-ordering, request omissions (e.g. due to caching), and slight variations in the sizes of requests and responses. Thus, this model and distance metric are a good match for real network and HTTP-level behavior. To build a classifier for recognizing encrypted, anonymized page loads
-of 1 of $n$ web pages, an attacker collects $k$ traces of each page,
-using the same privacy system, e.g. Tor or an SSH proxy, in use by the
-victim.  He then trains a support vector machine~\cite{vapnik-svm95}
-using a kernel based on edit distance. Evaluation shows that our attack significantly outperforms other proposed attacks on these
-and other defenses. Our attack can determine which web page, out of 100 possibilities, a victim is visiting with
-over 80\% success rate.
+Web pages can consist of multiple objects, such as HTML files, images, and flash objects, and browsers send separate requests for each object. There is some inherent stability in the ordering of requests: browsers cannot request an object until they have received the portion of a page that references it. These facts suggest a simple representation for the attacker's traffic observations, and a similarity metric the attacker can use to compare traces.  We developed a web site fingerprinting attack DLSVM \cite{cai-ccs12}, which represents a trace of $\ell$ packets as a vector $t=(d_1, \ldots, d_\ell)$, where $d_i=\pm s_i$, where $s_i$ is the size of the $i$th packet and the sign indicates the direction of the packet.  Our attack compares traces $t$ and $t'$ using the Damerau-Levenshtein edit distance~\cite{navarro-acmcs01}, which is the length of the shortest sequence of character insertions, deletions, substitutions, and transpositions required to transform $t$ into $t'$. In the context of our packet traces, these edits correspond to packet and request re-ordering, request omissions (e.g. due to caching), and slight variations in the sizes of requests and responses. Thus, this model and distance metric are a good match for real network and HTTP-level behavior. To build a classifier for recognizing encrypted, anonymized page loads of 1 of $n$ web pages, an attacker collects $k$ traces of each page, using the same privacy system, e.g. Tor or an SSH proxy, in use by the victim.  He then trains a support vector machine~\cite{vapnik-svm95} using a kernel based on edit distance. Evaluation shows that our attack significantly outperforms other proposed attacks on these and other defenses. Our attack can determine which web page, out of 100 possibilities, a victim is visiting with over 80\% success rate.
 
 % csbuflo
+The success of DLSVM implies that an effective defense should hide all possible side channel information leakages an attacker can possibly observe. Dyer, et al., described \buflo, a hypothetical defense scheme that hides all information about a website, except possibly its size, and performed a simulation-based evaluation that found that, although \buflo is able to offer good security, it incurs a high cost to do so. We built \csbuflo (\csb), an extension to \buflo that
+includes numerous security and efficiency improvements.  \csb represents a new approach to the design of fingerprinting defenses.
+Most previously-proposed defenses were designed in response to known attacks, and therefore took a black-listing approach to information leaks, i.e. they tried to hide specific features, such as packet sizes.  In designing \csb, we take a white-listing approach -- we start with a design that hides all traffic features, and iteratively refine the design to reveal certain traffic features that enable us to achieve significant performance improvements without significantly harming security. 
 
+\csb remedies several drawbacks of \buflo. To list a few:
+\begin{itemize}
+
+\item
+\buflo does not adapt when the user is visiting fast or slow websites. It wastes bandwidth when loading slow
+sites, and causes large latency when loading fast websites. -- We developed a rate adaptation algorithm which adapts the transmission rate to math the rate of the sender.
+
+\item
+\buflo is not TCP-friendly. -- \csb uses TCP to be congestion friendly, and uses feedback from the TCP stack in order to reduce the amount of junk data it needs to send.
+
+\item
+\buflo either completely hides the size of the website or completely reveals it ($\pm d$ bytes).  Thus it does not provide the same level of security to all websites. It also has large overheads for small websites.  Thus its overhead is also unevenly distributed. -- \csb uses a scale-independent padding scheme and monitors the state of the page loading process to avoid some unnecessary overheads.
+
+\end{itemize}
+
+We develop bounds on the trade-off between security and bandwidth overhead that any fingerprinting defense scheme can achieve. This enables us to compare schemes with different security/overhead trade-offs by comparing how close they are to optimal. Our experiments find that \csb is closer to the optimal bandwidth/security trade-off curve than Tor or plain SSH.
 
 \section{Future Research}
 
+Our theoretical analysis of lower bounds suggests that the reason website fingerprinting defenses are expensive is not because
+websites are so different. It is because the defense lacks the knowledge of where to put the cover traffic correctly,
+thus it has to put it everywhere. An interesting direction for future research is to build a defense that can remember
+information about websites it has seen before, thus it has sufficient knowledge to make a wise decision about where
+to put the cover traffic.
+
+Suppose websites $w_1,\dots,w_n$ are all static and constructed such
+that loading each site requires performing a fixed, serialized
+sequence of requests and responses, e.g. each web page contains a
+javascript program that loads objects one at a time in a fixed order.
+Let $s_i[j]=1$ iff the $j$th byte that must be transmitted to load
+page $w_i$ is a transmission in the upstream direction.  
+
+Loading website $w_i$ via a deterministic defense mechanism produces a
+fixed trace $t_i$.  Consider a DLSVM attacker that converts $t_i$ into
+a binary string $z_i$ where $z_i[j]=1$ iff the $j$th byte of $t_i$ is
+an upstream byte.  Since, for these websites, the defense mechanisms
+cannot delete or re-order bytes, we must have that $s_i$ is a
+sub-sequence of $z_i$.
+
+A defense can achieve perfect security only if $z_1=\dots=z_n$.  Thus
+the defense system must compute some string, $z$, that is
+simultaneously a super-sequence of $s_1,\dots,s_n$.  Minimizing the
+cost of such a defense is thus equivalent to finding the
+shortest common super-sequence (SCS) of $s_1, \dots, s_n$.
+This problem is NP-hard\cite{SCS_SR8}.
+
+However, there is a simple 2-approximation for the binary SCS problem.
+Let $\ell$ be the length of the longest string $s_1,\dots,s_n$.  Their
+SCS must be at least $\ell$ long, but is at most $2\ell$ long, since
+every binary string of length at most $\ell$ is a sub-sequence of
+$(01)^\ell$.  Thus for any set of static websites $w_1,\dots,w_n$,
+there exists a deterministic offline defense that achieves $\epsilon$-security against DLSVM-style attackers and
+incurs bandwidth cost that is at most twice the bandwidth of the largest website under consideration. The drawback of the simple algorithm is that it does not hide inter-packet intervals. We need to develop a new algorithm for computing SCS that hides both sizes and time intervals, and to evaluate the overhead it brings.
+
+There are some other interesting topics related to website fingerprinting defenses that worth pursuing. To name a few:
+
+\begin{itemize}
+
+\item
+Even if we have a perfect defense scheme that hides web site contents, it is still possible that the defense system is easily recognizable, i.e. a signature of the defense system itself is easily obtained. Hence, a censor can choose to block any traffic pattern having that signature. Hiding the defense system itself can be a challenging task.
+
+\item
+The threat model of website fingerprinting attacks involves an attacker monitoring the first hop traffic of the victim. This requirement can be achieved relatively easily in reality, compared with other models that require an active attacker or involve multiple hops. However, in a different network model, e.g. Content-Centric Networking \cite{jacobson-CoNEXT09}, the traffic observed on the first hop may not reflect the real inter-packet intervals due to the caching scheme used in CCN. It is not clear whether the new architecture is resilient to website fingerprinting attacks by nature.
+
+\end{itemize} 
 
 \bibliographystyle{plain}
 \bibliography{xiang}
