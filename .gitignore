@@ -219,3 +219,4 @@ pip-log.txt
 *.dvi
 *.bbl
 *.blg
+*.out
