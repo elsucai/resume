@@ -41,14 +41,25 @@
 	\begin{flushleft}\fontfamily{phv}\selectfont\Huge\Large#1\end{flushleft}
 }
 
+\newenvironment{ressection_empty}[1]{
+%	\vspace{4pt}
+	\vspace{-1pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	
+	\vspace{-8pt} \rule{\textwidth}{.5pt}
+}
 
 % A ressection is a main section (<H1>Section</H1>)
 \newenvironment{ressection}[1]{
 %	\vspace{4pt}
-	\vspace{-2pt}
+	\vspace{-1pt}
 	{\fontfamily{phv}\selectfont\Large#1}
+	
+	\vspace{-8pt} \rule{\textwidth}{.5pt}
+	
+	\vspace{-8pt}
 	\begin{itemize}
-	\vspace{1pt}
+	\vspace{.5pt}
 }{
 	\end{itemize}
 }
@@ -204,7 +215,7 @@ Xiang Cai
 \begin{ressection}{Education}
 
 	\begin{ressubsec}{Stony Brook University}{Stony Brook, NY}{\textbf{Ph.D.} candidate
-		in Computer Science(GPA:3.93/4) \hfill Expected May 2014}
+		in Computer Science (GPA:3.93/4) \hfill Expected May 2014}
 		\ressubitem{Research focuse on \textbf{System Security, Network Security} and \textbf{Privacy.}
 		%	\begin{small}
 		%		\textit{} 
@@ -228,28 +239,44 @@ Xiang Cai
 %		}                                                                     
 	\end{ressubsec}
 
+	\vspace{-4pt}
 	\begin{ressubsec_empty}{University of Sciences \& Technology of
 		China(USTC)}{Hefei, Anhui, China}{\textbf{B.E.} in Computer
-			Science(GPA:3.83/4.3) \hfill July 2007}
+			Science (GPA:3.83/4.3) \hfill July 2007}
 	\end{ressubsec_empty}
 
 
 \end{ressection}
 
+\begin{ressection_empty}{Technical Skills}
+\vspace{-20pt}
+\begin{table}[h]
+\begin{tabular}[h]{p{0.4\textwidth}p{0.6\textwidth}}
 
-\begin{ressection}{Technical Skills}
-	\vspace{-6pt}
+\textbf{Programming Languages:} & \textbf{C/C++} (proficient, 3+ years of experience), \textbf{Java} (intermediate), \textbf{python, ruby, PHP} (beginner)	\\[1.5pt]
+\textbf{Platforms \& Development Tools:} & Linux, Vim, GDB, git, Netbeans	\\[1.5pt]
+\textbf{Background:} & System Security, Network Security and Privacy, Network Programming, Big Data Analysis, Machine Learning \\
+\end{tabular}
+\end{table}
+\vspace{-8pt}
+
+\begin{comment}
 	\resitem{
-		Programming Languages: \textbf{C/C++} (proficient, 3+ years of experience), \textbf{Java} (intermediate), \textbf{python, ruby, PHP} (beginner)
+		\textbf{Programming Languages:} \textbf{C/C++} (proficient, 3+ years of experience), \textbf{Java} (intermediate), \textbf{python, ruby, PHP} (beginner)
 	}
 	\vspace{-4pt}
 	\resitem{
-		Development Tools: \textbf{gdb}, \textbf{git}, \textbf{Netbeans} 
+		\textbf{Platforms \& Development Tools:} Linux, Vim, GDB, git, Netbeans
 	}
 	\vspace{-4pt}
 	\resitem{
-		Operating Systems: \textbf{Linux (Ubuntu)} (4+ years of experience)
+		\textbf{Background:} System Security, Network Security and Privacy, Network Programming, Big Data Analysis, Machine Learning
 	}
+\end{comment}
+%	\vspace{-4pt}
+%	\resitem{
+%		Operating Systems: \textbf{Linux (Ubuntu)} (4+ years of experience)
+%	}
 
 %	\resitem{Broad and diversified background in \textbf{System Programming},
 %		\textbf{Algorithms}, \textbf{Software Development} and
@@ -257,11 +284,12 @@ Xiang Cai
 %				Security} and \textbf{Network Security}. Excellent troubleshooting/problem solving skills.
 %	}
 
-\end{ressection}
+\end{ressection_empty}
 
 
 \begin{ressection}{Working Experience}
 	\begin{ressubsec}{Hewlett-Packard Labs}{Princeton, NJ}{\textbf{Research Associate Intern} \hfill June 2012 -- August 2012}
+		\vspace{-2pt}
 		\begin{small}
 			\resitem{Conduct large scale data analysis on passive DNS traffic to find malicious command-and-control servers.}
 		\end{small}
@@ -271,10 +299,11 @@ Xiang Cai
 
 \begin{ressection}{Research Projects}
 
-	\resitem{\textbf{Website fingerprinting defenses. Aug.
-		2012. [C++/ruby/python/MYSQL]} 
+	\resitem{\textbf{Website fingerprinting defenses.} Aug.
+		2012. \hfill\textbf{[C++/ruby/python/MYSQL]} 
+		\vspace{-2pt}
 		\begin{small}
-		
+
 		Developed bounds on the trade-off between security and
 		bandwidth overhead that any fingerprinting defense scheme can
 		achieve, which enables us to compare schemes with different
@@ -289,11 +318,12 @@ Xiang Cai
 		than Tor or plain SSH.
 		\end{small}				
 	}
-
-	\resitem{\textbf{Website fingerprinting attacks on Tor. May.
-		2011. [C++/Java/ruby/MYSQL]} 
+	\vspace{-4pt}
+	\resitem{\textbf{Website fingerprinting attacks on Tor.} May.
+		2011. \hfill\textbf{[C++/Java/ruby/MYSQL]} 
+		\vspace{-2pt}
 		\begin{small}
-		
+
 		Proposed and implemented two new website fingerprinting
 			attacks on the Tor anonymity system. Our web page
 			classifier was novel in that, unlike all previous
@@ -303,8 +333,10 @@ Xiang Cai
 		\end{small}				
 	}
 
-	\resitem{\textbf{A novel machine registration procedure. Dec. 
-		2010. [PHP/MYSQL]}
+	\vspace{-4pt}
+	\resitem{\textbf{A novel machine registration procedure.} Dec. 
+		2010. \hfill\textbf{[PHP/MYSQL]}
+		\vspace{-2pt}
 		\begin{small}
 		
 		Designed a novel online machine
@@ -317,8 +349,10 @@ Xiang Cai
 		\end{small}	
 	}
 			
+	\vspace{-4pt}
 	\resitem{\textbf{A C library for serializable file-system
-				accessing. Feb. 2010. [C/C++/Shell]} 
+				accessing.} Feb. 2010. \hfill\textbf{[C/C++/Shell]} 
+		\vspace{-2pt}
 		\begin{small}
 		
 		Proposed and implemented an
@@ -331,9 +365,11 @@ Xiang Cai
 		\end{small}
 	}
 	
-	\resitem{\textbf{Race attack on Unix File-Systems. Oct. 2008. [C/Shell]}
+	\vspace{-4pt}
+	\resitem{\textbf{Race attack on Unix File-Systems.} Oct. 2008. \hfill\textbf{[C/Shell]}
+		\vspace{-2pt}
 		\begin{small}
-		
+
 		Defeated two proposed Unix file-system race
 			condition defense mechanisms. We argued that all
 			kernel-based dynamic race detectors must have a model of
