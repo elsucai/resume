@@ -1,6 +1,6 @@
 % Xiang Cai's Resume
 % Created: Oct. 22 2010
-% Last Modified: Dec. 7 2013
+% Last Modified: Jan. 20 2014
 
 \documentclass[11pt,oneside]{article}
 \usepackage{geometry}
@@ -10,7 +10,7 @@
 \usepackage[colorlinks=false,linkcolor=black]{hyperref}
 \def\pdfBorderAttrs{/Border [0 0 0] } 
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+\geometry{letterpaper,tmargin=.5in,bmargin=.5in,lmargin=.5in,rmargin=.5in,headheight=0in,headsep=0in,footskip=.3in}
 
 \setlength{\parindent}{0in}
 \setlength{\parskip}{0in}
@@ -22,8 +22,8 @@
 \newcommand{\name}{Xiang Cai\xspace}
 \newcommand{\addrlinea}{29 Millbrook Drive\xspace}
 \newcommand{\addrlineb}{Stony Brook, NY 11790, USA\xspace}
-\newcommand{\phone}{\hfill \textit{Mobile: }(631)680-8544\xspace}
-\newcommand{\email}{\hfill \textit{Email: }xcai@cs.stonybrook.edu\xspace}
+\newcommand{\phone}{\hfill \textbf{Mobile: }(631)680-8544\xspace}
+\newcommand{\email}{\hfill \textbf{Email: }xcai@cs.stonybrook.edu\xspace}
 \newcommand{\cvphone}{\textit{(631)680-8544}\xspace}
 \newcommand{\cvemail}{\textit{xcai@cs.stonybrook.edu}\xspace}
 
@@ -44,23 +44,24 @@
 
 % A ressection is a main section (<H1>Section</H1>)
 \newenvironment{ressection}[1]{
-	\vspace{4pt}
+%	\vspace{4pt}
+	\vspace{-2pt}
 	{\fontfamily{phv}\selectfont\Large#1}
 	\begin{itemize}
-	\vspace{3pt}
+	\vspace{1pt}
 }{
 	\end{itemize}
 }
 
 % A resitem is a simple list element in a ressection (first level)
 \newcommand{\resitem}[1]{
-	\vspace{-4pt}
+	\vspace{1pt}
 	\item \begin{flushleft} #1 \end{flushleft}
 }
 
 % A ressubitem is a simple list element in anything but a ressection (second level)
 \newcommand{\ressubitem}[1]{
-	\vspace{-1pt}
+	\vspace{-4pt}
 	\item \begin{flushleft} #1 \end{flushleft}
 }
 
@@ -72,13 +73,13 @@
 	\vspace{-5pt}
 	\item
 	\textbf{#1} --- #2 \\
-	\textit{#3}
+	{#3}
 }
 
 % This is a list that comes with a resbigitem
 \newenvironment{ressubsec}[3]{
 	\resbigitem{#1}{#2}{#3}
-	\vspace{-2pt}
+	\vspace{-4pt}
 	\begin{itemize}
 }{
 	\end{itemize}
@@ -180,16 +181,18 @@ Xiang Cai
 
 %\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
 
-\vspace{8 pt}
+%\vspace{8 pt}
 
-\contact{Contact Information}
-
+%\contact{Contact Information}
+\vspace{-6pt}
 \begin{table}[h]
 \begin{tabular}[h]{p{0.5\textwidth}p{0.5\textwidth}}
 \addrlinea & \phone \\
 \addrlineb & \email \\
 \end{tabular}
 \end{table}
+
+\vspace{-4pt}
 
 %\begin{ressection}{Objective}
 
@@ -201,7 +204,7 @@ Xiang Cai
 \begin{ressection}{Education}
 
 	\begin{ressubsec}{Stony Brook University}{Stony Brook, NY}{\textbf{Ph.D.} candidate
-		in Computer Science(GPA:3.93/4) \hfill \textbf{Expected May 2014}}
+		in Computer Science(GPA:3.93/4) \hfill Expected May 2014}
 		\ressubitem{Research focuse on \textbf{System Security, Network Security} and \textbf{Privacy.}
 		%	\begin{small}
 		%		\textit{} 
@@ -227,7 +230,7 @@ Xiang Cai
 
 	\begin{ressubsec_empty}{University of Sciences \& Technology of
 		China(USTC)}{Hefei, Anhui, China}{\textbf{B.E.} in Computer
-			Science(GPA:3.83/4.3) \hfill \textbf{July 2007}}
+			Science(GPA:3.83/4.3) \hfill July 2007}
 	\end{ressubsec_empty}
 
 
@@ -235,12 +238,15 @@ Xiang Cai
 
 
 \begin{ressection}{Technical Skills}
+	\vspace{-6pt}
 	\resitem{
 		Programming Languages: \textbf{C/C++} (proficient, 3+ years of experience), \textbf{Java} (intermediate), \textbf{python, ruby, PHP} (beginner)
 	}
+	\vspace{-4pt}
 	\resitem{
 		Development Tools: \textbf{gdb}, \textbf{git}, \textbf{Netbeans} 
 	}
+	\vspace{-4pt}
 	\resitem{
 		Operating Systems: \textbf{Linux (Ubuntu)} (4+ years of experience)
 	}
@@ -255,7 +261,7 @@ Xiang Cai
 
 
 \begin{ressection}{Working Experience}
-	\begin{ressubsec}{Hewlett-Packard Labs}{Princeton, NJ}{Research Associate Internship \hfill \textbf{June 2012 -- August 2012}}
+	\begin{ressubsec}{Hewlett-Packard Labs}{Princeton, NJ}{\textbf{Research Associate Intern} \hfill June 2012 -- August 2012}
 		\begin{small}
 			\resitem{Conduct large scale data analysis on passive DNS traffic to find malicious command-and-control servers.}
 		\end{small}
