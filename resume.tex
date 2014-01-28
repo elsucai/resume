@@ -1,6 +1,6 @@
 % Xiang Cai's Resume
 % Created: Oct. 22 2010
-% Last Modified: Jan. 20 2014
+% Last Modified: Jan. 27 2014
 
 \documentclass[11pt,oneside]{article}
 \usepackage{geometry}
@@ -52,12 +52,12 @@
 % A ressection is a main section (<H1>Section</H1>)
 \newenvironment{ressection}[1]{
 %	\vspace{4pt}
-	\vspace{-1pt}
+%	\vspace{-1pt}
 	{\fontfamily{phv}\selectfont\Large#1}
 	
 	\vspace{-8pt} \rule{\textwidth}{.5pt}
 	
-	\vspace{-8pt}
+	\vspace{-4pt}
 	\begin{itemize}
 	\vspace{.5pt}
 }{
@@ -66,7 +66,7 @@
 
 % A resitem is a simple list element in a ressection (first level)
 \newcommand{\resitem}[1]{
-	\vspace{1pt}
+	\vspace{2pt}
 	\item \begin{flushleft} #1 \end{flushleft}
 }
 
