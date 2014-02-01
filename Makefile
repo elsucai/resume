@@ -3,6 +3,7 @@ all:
 #	dvipdf resume
 	
 	pdflatex  cv
+	pdflatex coverletter
 #	dvipdf cv
 	
 	pdflatex rs
@@ -15,4 +16,4 @@ clean:
 
 veryclean:
 	rm -f *.dvi *.aux *.log 
-	rm -f resume.pdf cv.pdf rs.pdf
+	rm -f resume.pdf cv.pdf rs.pdf coverletter.pdf
