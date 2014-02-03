@@ -291,7 +291,7 @@ Xiang Cai
 	\begin{ressubsec}{Hewlett-Packard Labs}{Princeton, NJ}{\textbf{Research Associate Intern} \hfill June 2012 -- August 2012}
 		\vspace{-2pt}
 		\begin{small}
-			\resitem{Conduct large scale data analysis on passive DNS traffic to find malicious command-and-control servers.}
+			\resitem{Conducted large scale data analysis on passive DNS traffic to find malicious command-and-control servers.}
 		\end{small}
 	\end{ressubsec}
 \end{ressection}
@@ -303,19 +303,22 @@ Xiang Cai
 		2012. \hfill\textbf{[C++/ruby/python/MYSQL]} 
 		\vspace{-2pt}
 		\begin{small}
-
+		
+		\begin{itemize}
+		\item
 		Developed bounds on the trade-off between security and
-		bandwidth overhead that any fingerprinting defense scheme can
-		achieve, which enables us to compare schemes with different
+		bandwidth overhead.
+		\item
+		Compared schemes with different
 		security/overhead trade-offs by comparing how close they are
 		to the lower bound. 
-		
-		Refine, implement, and evaluate
-		the Congestion-Sensitive BuFLO scheme, which attracted the attention of the
-		Tor developers. Experiments find that Congestion-
-		Sensitive BuFLO has high overhead (around 2.3-2.8x) but can
+		\item
+		Refined, implemented, and evaluated
+		the Congestion-Sensitive BuFLO scheme, which has high overhead (around 2.3-2.8x) but can
 		get 6x closer to the bandwidth/security trade-off lower bound
 		than Tor or plain SSH.
+		\end{itemize}
+		
 		\end{small}				
 	}
 	\vspace{-4pt}
@@ -324,12 +327,16 @@ Xiang Cai
 		\vspace{-2pt}
 		\begin{small}
 
+		\begin{itemize}
+		\item		
 		Proposed and implemented two new website fingerprinting
-			attacks on the Tor anonymity system. Our web page
-			classifier was novel in that, unlike all previous
-			classifiers, it completely ignored packet sizes. Despite
-			its simplicity, our attack outperformed 
-			recently-published fingerprinting attacks on Tor. Source code: \textbf{git@github.com:xiang-cai/fingerprinting\_attack\_code.git}
+			attacks on the Tor anonymity system.
+		\item	
+			Our attack outperformed recently-published fingerprinting attacks on Tor.
+		\item			
+			Source code: \textbf{git@github.com:xiang-cai/fingerprinting\_attack\_code.git}
+		
+		\end{itemize}		
 		\end{small}				
 	}
 
@@ -339,13 +346,16 @@ Xiang Cai
 		\vspace{-2pt}
 		\begin{small}
 		
+		\begin{itemize}
+		\item
 		Designed a novel online machine
 			registration system. Users can register their computers to
 			certain service providers (e.g. Banks, SNS websites) by
 			visiting the registration website and then following specific
-			instructions. This new process is as simple as most existing
-			machine registration procedures yet more secure. Phishing and MITM attacks against the
-			system are almost impossible.
+			instructions.
+			\item
+			Defeated phishing and MITM attacks.
+		\end{itemize}
 		\end{small}	
 	}
 			
@@ -354,14 +364,18 @@ Xiang Cai
 				accessing.} Feb. 2010. \hfill\textbf{[C/C++/Shell]} 
 		\vspace{-2pt}
 		\begin{small}
-		
+		\begin{itemize}
+		\item
 		Proposed and implemented an
 					easy-to-use, portable, provably-secure system for
 					accessing UNIX file-systems without race conditions
 					and that supported arbitrary sequences of operations
 					within each pseudo-transaction and which had
 					negligible overhead on a mail-server
-					benchmark. Source code: \textbf{git@github.com:xiang-cai/trace.git}
+					benchmark.
+		\item					
+		Source code: \textbf{git@github.com:xiang-cai/trace.git}
+		\end{itemize}		
 		\end{small}
 	}
 	
@@ -370,11 +384,13 @@ Xiang Cai
 		\vspace{-2pt}
 		\begin{small}
 
+		\begin{itemize}
+		\item		
 		Defeated two proposed Unix file-system race
-			condition defense mechanisms. We argued that all
-			kernel-based dynamic race detectors must have a model of
-			the programs they protect or provide imperfect
-			protection. Source code: \textbf{git@github.com:xiang-cai/race\_attack.git}
+			condition defense mechanisms
+		\item			
+		Source code: \textbf{git@github.com:xiang-cai/race\_attack.git}
+		\end{itemize}		
 		\end{small}
 	} 
 
