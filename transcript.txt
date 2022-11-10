@@ -1,0 +1,129 @@
+Unofficial Transcript
+State University of New York
+Stony Brook University
+Stony Brook, NY 11794
+United States
+Print Date   :  2014-01-31
+                 - - - - -   Beginning of Graduate Record   - - - - -
+                                      Fall 2007
+Program  : Doctor of Philosophy
+Plan     : Computer Science Plan
+Session  : Full Fall Semester Session  (2007-09-04 to 2007-12-22)
+CSE       508       Network Security                  3.00     3.00 B+       9.990
+CSE       540       Theory of Computation             3.00     3.00 A-      11.010
+CSE       548       Analysis of Algorithms            3.00     3.00 A       12.000
+CSE       698       Practicum in Teaching             3.00     3.00 A       12.000
+         TERM GPA :     3.750      TERM TOTALS :     12.00    12.00         45.000
+         CUM  GPA :     3.750      CUM  TOTALS :     12.00    12.00         45.000
+                                     Spring 2008
+Program  : Doctor of Philosophy
+Plan     : Computer Science Plan
+Session  : Full Spring Semester Session  (2008-01-28 to 2008-05-20)
+CSE       532       Theory of Database Systems        3.00     3.00 A       12.000
+CSE       541       Logic in Computer Science         3.00     3.00 A       12.000
+CSE       547       Discrete Mathematics              3.00     3.00 A       12.000
+CSE       600       Top in Modern Computer Science    1.00     1.00 S
+     Course Topic(s): TOPICS MOD COMP SCI
+CSE       698       Practicum in Teaching             2.00     2.00 A        8.000
+         TERM GPA :     4.000      TERM TOTALS :     12.00    12.00         44.000
+         CUM  GPA :     3.870      CUM  TOTALS :     24.00    24.00         89.000
+                                      Fall 2008
+Program  : Doctor of Philosophy
+Plan     : Computer Science Plan
+Session  : Full Fall Semester Session  (2008-09-02 to 2008-12-23)
+CSE       506       Operating Systems                 3.00     3.00 A       12.000
+CSE       534       Fundament of Computer Networks    3.00     3.00 A       12.000
+CSE       593       Independent Study in Comp Sci     2.00     2.00 A        8.000
+CSE       600       Top in Modern Computer Science    1.00     1.00 S
+     Course Topic(s): TOPICS MOD COMP SCI
+         TERM GPA :     4.000      TERM TOTALS :      9.00     9.00         32.000
+         CUM  GPA :     3.900      CUM  TOTALS :     33.00    33.00        121.000
+                                     Spring 2009
+Program  : Doctor of Philosophy
+Plan     : Computer Science Plan
+Session  : Full Spring Semester Session  (2009-01-26 to 2009-05-19)
+CSE       593       Independent Study in Comp Sci     6.00     6.00 A       24.000
+CSE       595       Topics in Computer Science        3.00     3.00 A       12.000
+     Course Topic(s): Sensor Networks
+         TERM GPA :     4.000      TERM TOTALS :      9.00     9.00         36.000
+         CUM  GPA :     3.930      CUM  TOTALS :     42.00    42.00        157.000
+                                      Fall 2009
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Fall Semester Session  (2009-08-31 to 2009-12-21)
+CSE       699       Dissertation Resrch on Campus     9.00     9.00 S
+         TERM GPA :     0.000      TERM TOTALS :      9.00     9.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :     51.00    51.00        157.000
+                                     Spring 2010
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Spring Semester Session  (2010-01-25 to 2010-05-18)
+CSE       699       Dissertation Resrch on Campus     9.00     9.00 S
+         TERM GPA :     0.000      TERM TOTALS :      9.00     9.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :     60.00    60.00        157.000
+                                      Fall 2010
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Fall Semester Session  (2010-08-30 to 2010-12-20)
+CSE       699       Dissertation Resrch on Campus     9.00     9.00 S
+         TERM GPA :     0.000      TERM TOTALS :      9.00     9.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :     69.00    69.00        157.000
+                                     Spring 2011
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Spring Semester Session  (2011-01-31 to 2011-05-23)
+CSE       699       Dissertation Resrch on Campus     9.00     9.00 S
+         TERM GPA :     0.000      TERM TOTALS :      9.00     9.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :     78.00    78.00        157.000
+                                      Fall 2011
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Fall Semester Session  (2011-08-29 to 2011-12-20)
+CSE       699       Dissertation Resrch on Campus     9.00     9.00 S
+         TERM GPA :     0.000      TERM TOTALS :      9.00     9.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :     87.00    87.00        157.000
+                                     Spring 2012
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Spring Semester Session  (2012-01-23 to 2012-05-15)
+CSE       699       Dissertation Resrch on Campus     9.00     9.00 S
+         TERM GPA :     0.000      TERM TOTALS :      9.00     9.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :     96.00    96.00        157.000
+                                     Summer 2012
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Summer I - C  (2012-05-29 to 2012-07-06)
+CSE       696       Internship in Research            1.00     1.00 S
+         TERM GPA :     0.000      TERM TOTALS :      1.00     1.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :     97.00    97.00        157.000
+                                      Fall 2012
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Fall Semester Session  (2012-08-27 to 2012-12-19)
+CSE       699       Dissertation Resrch on Campus     9.00     9.00 S
+         TERM GPA :     0.000      TERM TOTALS :      9.00     9.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :    106.00   106.00        157.000
+                                     Spring 2013
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Spring Semester Session  (2013-01-28 to 2013-05-22)
+CSE       699       Dissertation Resrch on Campus     9.00     9.00 S
+         TERM GPA :     0.000      TERM TOTALS :      9.00     9.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :    115.00   115.00        157.000
+                                      Fall 2013
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Fall Semester Session  (2013-08-26 to 2013-12-18)
+CSE       699       Dissertation Resrch on Campus     9.00     9.00 S
+         TERM GPA :     0.000      TERM TOTALS :      9.00     9.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :    124.00   124.00        157.000
+                                     Spring 2014
+Program  : CSE Advance to Candidacy
+Plan     : PhD in Computer Science Plan
+Session  : Full Spring Semester Session  (2014-01-27 to 2014-05-21)
+CSE       699       Dissertation Resrch on Campus     9.00
+         TERM GPA :     0.000      TERM TOTALS :      0.00     0.00          0.000
+         CUM  GPA :     3.930      CUM  TOTALS :    124.00   124.00        157.000
+Graduate Career Totals
+         CUM  GPA :     3.930      CUM  TOTALS :    124.00   124.00        157.000
+

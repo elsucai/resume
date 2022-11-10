@@ -1,6 +1,6 @@
 % Xiang Cai's Resume
 % Created: Oct. 22 2010
-% Last Modified: Feb. 3 2014
+% Last Modified: Nov. 10 2022
 
 \documentclass[11pt,oneside]{article}
 \usepackage{geometry}
@@ -20,12 +20,12 @@
 
 % Name and contact information
 \newcommand{\name}{Xiang Cai\xspace}
-\newcommand{\addrlinea}{80 Fawcett Street, Unit 517\xspace}
-\newcommand{\addrlineb}{Cambridge, MA, 01238, USA\xspace}
+\newcommand{\addrlinea}{24 Iroquois Rd\xspace}
+\newcommand{\addrlineb}{Arlington, MA, 02476, USA\xspace}
 \newcommand{\phone}{\hfill \textbf{Mobile: }(631)680-8544\xspace}
-\newcommand{\email}{\hfill \textbf{Email: }xcai@cs.stonybrook.edu\xspace}
+\newcommand{\email}{\hfill \textbf{Email: }xcai.stonybrook@gmail.com\xspace}
 \newcommand{\cvphone}{\textit{(631)680-8544}\xspace}
-\newcommand{\cvemail}{\textit{xcai@cs.stonybrook.edu}\xspace}
+\newcommand{\cvemail}{\textit{xcai.stonybrook@gmail.com}\xspace}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -87,6 +87,12 @@
 	{#3}
 }
 
+\newcommand{\resbigitemb}[2]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1} --- #2
+}
+
 % This is a list that comes with a resbigitem
 \newenvironment{ressubsec}[3]{
 	\resbigitem{#1}{#2}{#3}
@@ -94,6 +100,11 @@
 	\begin{itemize}
 }{
 	\end{itemize}
+}
+
+\newenvironment{ressubsecb}[2]{
+	\resbigitemb{#1}{#2}
+	\vspace{-4pt}
 }
 
 % Same as ressubsec, but no item is required
@@ -212,31 +223,99 @@ Xiang Cai
 %\end{ressection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Working Experience}
-	\begin{ressubsec_empty}{Twitter Inc.}{Cambridge, MA}{\textbf{Software Engineer II} \hfill September 2014 -- present}
-		\vspace{-2pt}
-		%\begin{small}
-		%	\resitem{group name}
-		%\end{small}
-	\end{ressubsec_empty}
+\begin{ressection}{Work Experience}
+    \vspace{-5pt}
+    \item
+        {\fontfamily{serif}\selectfont\Large\bf{{Twitter}\hfill{Cambridge, MA}}}\vspace{3pt} \\
+        {\emph{\textbf{Senior Software Engineer} (Learning Streams Platform Team)} \hfill\emph{October 2021 -- November 2022}}
+    \vspace{-4pt}
+    \begin{itemize}
+        \begin{small}
+            \resitem{Oversaw a multi-team effort to integrate critical server side metadata into event logs, which provided better quality user signals to serve more relevant content to end users and ultimately improved our app engagement by 0.1\%.}
+            \resitem{Improved a data ingestion service that processes around 10 million events per second to ingest data in real time to Kafka.}
+    		\resitem{Collaborated with multiple cross-functional teams and finished a multi-year effort to deprecate an event logging service, cutting the cost by \$30,000 per month.}
+    		\resitem{Designed and implemented a self-serving data governance service that is essential for event ownership management, user privacy and traffic control. (Scala, MySQL.)}
+    		\resitem{Contributed to the design and implementation of a real-time event ingestion pipeline that provides critical data to analytic systems and ML model training downstream. (Scala, Kafka, BigQuery, Pubsub, Terraform.)}
+    	\end{small}
+	\end{itemize}
 	
-	\begin{ressubsec}{Hewlett-Packard Labs}{Princeton, NJ}{\textbf{Research Associate Intern} \hfill June 2012 -- August 2012}
-		\vspace{-2pt}
-		\begin{small}
-			\resitem{Conducted large scale data analysis on passive DNS traffic to find malicious command-and-control servers.}
+    {\emph{\textbf{Senior Software Engineer} (Video Data Infrastructure Team)} \hfill\emph{December 2019 -- October 2021}} \\
+    {\emph{\textbf{Software Engineer II} (Video Data Infrastructure Team)} \hfill\emph{April 2018 -- December 2019}}
+    \vspace{-4pt}
+    \begin{itemize}
+        \begin{small}
+            \resitem{Prototyped a metrics computation PoC using Airflow running on GCP. (Python)}
+    		\resitem{Contributed to the design and implementation of moving the media event aggregation infrastructure from on-prem to GCP. (Dataflow, BigQuery, BigTable, Pubsub.)}
+    		\resitem{Oversaw the Personal Data Protection work on the VDI team and made sure the 10+ services and datasets we own are compliant with global regulation laws. (GDPR, etc.)}
+    	\end{small}
+	\end{itemize}
+	
+	{\emph{\textbf{Tech Lead, Software Engineer II} (Media Monetization Team)} \hfill\emph{March 2017 -- April 2018}} \\
+    {\emph{\textbf{Software Engineer II} (Media Monetization Team)} \hfill\emph{September 2014 -- March 2017}}
+    \vspace{-4pt}
+    \begin{itemize}
+        \begin{small}
+    		\resitem{Built, maintained and improved services that were responsible for computing and serving various video metrics, including the video view counts shown on Twitter videos. (Scala, Scalding.)}
+    		\resitem{Designed and implemented a data validation system that monitored video event quality. (Python, Presto.)}
+    	\end{small}
+	\end{itemize}
+	
+	\vspace{-5pt}
+    \item
+        {\fontfamily{serif}\selectfont\Large\bf{{Hewlett-Packard Labs}\hfill{Princeton, NJ}}}\vspace{3pt} \\
+        {\emph{Research Associate Intern} \hfill\emph{June 2012 -- August 2012}}
+    \vspace{-4pt}
+    \begin{itemize}
+        \begin{small}
+            \resitem{Conducted large scale data analysis on passive DNS traffic to find malicious command-and-control servers.}
 			\resitem{Implemented a prototype system for detecting malicious URLs using Java.}
-		\end{small}
-	\end{ressubsec}
+    	\end{small}
+	\end{itemize}
 \end{ressection}
 
-\begin{ressection}{Education}
+\begin{ressection_empty}{Technical Skills}
+\vspace{-20pt}
+\begin{table}[h]
+\begin{tabular}[h]{p{0.4\textwidth}p{0.6\textwidth}}
 
-	\begin{ressubsec}{Stony Brook University}{Stony Brook, NY}{\textbf{Ph.D.} in Computer Science (GPA:3.93/4) \hfill September 2007 -- August 2014}
-		\ressubitem{Research focuse on \textbf{System Security, Network Security} and \textbf{Privacy.}
+\textbf{Programming Languages:} & \textbf{Scala} (proficient, 8+ years of experience), \textbf{Python} (proficient, 3+ years of experience), \textbf{C/C++, Java, MySQL} (intermediate), \textbf{shell} (beginner)	\\[1.5pt]
+\textbf{Platforms \& Development Tools:} & BigQuery, BigTable, Kafka, Pubsub, MapReduce, git, Intellij  \\[1.5pt]
+\textbf{Background:} & Big Data Analysis, Data Pipeline, Machine Learning, Security and Privacy \\
+\end{tabular}
+\end{table}
+\vspace{-8pt}
+
+%	\vspace{-4pt}
+%	\resitem{
+%		Operating Systems: \textbf{Linux (Ubuntu)} (4+ years of experience)
+%	}
+
+%	\resitem{Broad and diversified background in \textbf{System Programming},
+%		\textbf{Algorithms}, \textbf{Software Development} and
+%			\textbf{Computer Security}. Specialization in \textbf{System
+%				Security} and \textbf{Network Security}. Excellent troubleshooting/problem solving skills.
+%	}
+
+\end{ressection_empty}
+
+\begin{ressection}{Education}
+    \vspace{-5pt}
+    \item
+        {\fontfamily{serif}\selectfont\Large\bf{{Stony Brook University}\hfill{Stony Brook, NY}}}\vspace{3pt} \\
+        {\emph{\textbf{Ph.D.} in Computer Science (GPA:3.93/4)} \hfill\emph{September 2007 -- August 2014}}
+    \vspace{-4pt}
+    \begin{itemize}
+        \begin{small}
+            \resitem{Research focuses on \textbf{System Security, Network Security} and \textbf{Privacy.}}
+    	\end{small}
+	\end{itemize}
+	
+	%\begin{ressubsec}{Stony Brook University}{}{\emph{\textbf{Ph.D.} in Computer Science (GPA:3.93/4)} \hfill\emph{September 2007 -- August 2014}}
+	%	\ressubitem{Research focuses on \textbf{System Security, Network Security} and \textbf{Privacy.}
 		%	\begin{small}
 		%		\textit{} 
 		%	\end{small}
-		}
+		%}
 		
 %		\ressubitem{Core Courses:
 %			\begin{small}
@@ -253,56 +332,23 @@ Xiang Cai
 %			\end{small}
 %			}
 %		}                                                                     
-	\end{ressubsec}
+%	\end{ressubsec}
 
-	\vspace{-4pt}
-	\begin{ressubsec_empty}{University of Sciences \& Technology of
-		China(USTC)}{Hefei, Anhui, China}{\textbf{B.E.} in Computer
-			Science (GPA:3.83/4.3) \hfill July 2007}
-	\end{ressubsec_empty}
+    \vspace{-5pt}
+    \item
+        {\fontfamily{serif}\selectfont\Large\bf{{University of Sciences \& Technology of China}\hfill{Hefei, Anhui, China}}}\vspace{3pt} \\
+        {\emph{\textbf{B.E.} in Computer Science (GPA:3.83/4.3)} \hfill\emph{September 2003 - July 2007}}
+
+%	\vspace{-4pt}
+%	\begin{ressubsec_empty}{University of Sciences \& Technology of
+%		China (USTC)}{Hefei, Anhui, China}{\textbf{B.E.} in Computer
+%			Science (GPA:3.83/4.3) \hfill\textbf{September 2003 - July 2007}}
+%	\end{ressubsec_empty}
 
 
 \end{ressection}
 
-\begin{ressection_empty}{Technical Skills}
-\vspace{-20pt}
-\begin{table}[h]
-\begin{tabular}[h]{p{0.4\textwidth}p{0.6\textwidth}}
-
-\textbf{Programming Languages:} & \textbf{C/C++} (proficient, 3+ years of experience), \textbf{Java, MySQL} (intermediate), \textbf{python, ruby, shell, PHP} (beginner)	\\[1.5pt]
-\textbf{Platforms \& Development Tools:} & Linux, Vim, GDB, git, Netbeans	\\[1.5pt]
-\textbf{Background:} & System Security, Network Security and Privacy, Network Programming, Big Data Analysis, Machine Learning \\
-\end{tabular}
-\end{table}
-\vspace{-8pt}
-
 \begin{comment}
-	\resitem{
-		\textbf{Programming Languages:} \textbf{C/C++} (proficient, 3+ years of experience), \textbf{Java} (intermediate), \textbf{python, ruby, PHP} (beginner)
-	}
-	\vspace{-4pt}
-	\resitem{
-		\textbf{Platforms \& Development Tools:} Linux, Vim, GDB, git, Netbeans
-	}
-	\vspace{-4pt}
-	\resitem{
-		\textbf{Background:} System Security, Network Security and Privacy, Network Programming, Big Data Analysis, Machine Learning
-	}
-\end{comment}
-%	\vspace{-4pt}
-%	\resitem{
-%		Operating Systems: \textbf{Linux (Ubuntu)} (4+ years of experience)
-%	}
-
-%	\resitem{Broad and diversified background in \textbf{System Programming},
-%		\textbf{Algorithms}, \textbf{Software Development} and
-%			\textbf{Computer Security}. Specialization in \textbf{System
-%				Security} and \textbf{Network Security}. Excellent troubleshooting/problem solving skills.
-%	}
-
-\end{ressection_empty}
-
-
 \begin{ressection}{Research Projects}
 
 	\resitem{\textbf{Website fingerprinting defenses.} Aug.
@@ -401,7 +447,6 @@ Xiang Cai
 		\end{small}
 	} 
 
-
 %	\begin{ressubsec}{Stony Brook University, Computer Science
 %		Department}{Stony Brook, NY}{Research Assistant under \textbf{Prof. Rob
 %			Johnson}: Summer 2008--present}
@@ -470,7 +515,7 @@ Xiang Cai
 %	\end{ressubsec}
 
 \end{ressection}
-
+\end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
@@ -503,7 +548,7 @@ Xiang Cai
 		\end{small}
 	}
 \end{ressection}
-\end{comment}
+
 
 \begin{ressection}{Talks}
 	\resitem{\textbf{Touching From a Distance: Website Fingerprinting
@@ -523,9 +568,11 @@ Xiang Cai
 	\resitem{\textbf{Security and Communication Networks 2013, } \begin{small}Invited journal reviewer.\end{small}
 	}
 \end{ressection}
-
+\end{comment}
 
 \begin{ressection}{Publications}
+    \resitem{Selected publications are listed on this \href{https://scholar.google.com/citations?user=aLLW2YIAAAAJ&hl=en&oi=ao}{Google Scholar page}.}
+\begin{comment}
 	\resitem{Glove: A Bespoke Website Fingerprinting Defense. \begin{small} Rishab Nithyanand, \textbf{Xiang Cai} and Rob Johnson. \textit{Workshop on Privacy in the Electronic Society, Scottsdale, AZ, November 2014}.
 	\end{small}}
 	
@@ -549,7 +596,7 @@ Xiang Cai
 				Oakland, CA, May 2009}. 
 	%			(Acceptance rate: 10.2\%, 26/254)
 				\end{small}}
-
+\end{comment}
 \end{ressection}
 %%%%%%%%%%%%%%%%%%%%%%%%
 

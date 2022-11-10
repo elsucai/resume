@@ -1,0 +1,204 @@
+% Xiang Cai's Resume
+% Created: 7 Jan 2004
+% Last Modified: 17 Jul 2004
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=false,linkcolor=black]{hyperref}
+\def\pdfBorderAttrs{/Border [0 0 0] } 
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Jun Yuan}
+\newcommand{\addr}{700 Health Sciences Dr, Chapin C 2038B, Stony Brook, NY 11790}
+\newcommand{\phone}{(631) 745-9356}
+\newcommand{\email}{YJWHust@gmail.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+
+\begin{ressection}{Objective}
+
+	\resitem{To obtain a 2011 summer intern in the area of Software Developement, Software Security and System Security.}
+
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+	\begin{ressubsec}{Stony Brook University(SUNYSB)}{Stony Brook, NY}{Ph.D candidate in Computer Science(GPA:3.6/4): Sep. 2007- Present}
+		\ressubitem{Core Courses: \begin{small}\textit{Operating System; Analysis of Algorithm; Advanced Compiler Design; Artificial Intelligence; Theory of Database System; Secure Data Management}\end{small}
+}
+		\ressubitem{Candidate Exam Report: \href{http://docs.google.com/fileview?id=0Byne4VTOYpXPMGFjMzM5NWQtZWNiMC00M2Y2LThiNjktOTdmNjk4ODY2N2Rm&hl=en}{\begin{small}\textit{Type based Security Verification and Program Transformation}\end{small}
+}}                                                                     
+	\end{ressubsec}
+
+	\begin{ressubsec}{Huazhong University of Science \& Technology(HUST)}{Wuhan, China}{M.S in Computer Science(GPA:3.6/4): Sep. 2004 - Feb. 2007}
+		\ressubitem{Master Thesis:\begin{small}\textit{ The Application of Image Watermarking Technology}\end{small}}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Huazhong University of Science \& Technology(HUST)}{Wuhan, China}{B.E in Computer Science(GPA:3.8/4 Graduated with Honor): Sep. 2000 - June. 2004}
+		\ressubitem{Bachelor Thesis:\begin{small}\textit{ A Blind Watermarking Algorithm Based on Block DCT}\end{small}}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+\begin{ressection}{Skills}
+\resitem{Broad and diversified background in \textbf{compiler},  \textbf{system programming}, \textbf{algorithms}, \textbf{software developement} and \textbf{computer security}. Specialization in \textbf{programming language}, \textbf{software security} and \textbf{system security}(\begin{small}C/C++, Java, Ocaml/SML, UNIX Shell, Python, Assembler, OllyDbg Prolog, Matlab,MySQL.\end{small}).Excellent troubleshooting/debugging/problem solving skills. A Self-starter, willing and always ready to learn}
+
+\end{ressection}
+\begin{ressection}{Selected Projects:}
+  \resitem{\textbf{Software Recovery}(\textit{Software Security}). A dynamic software self-healing mechanism is implemented by considering each function as a transaction. \begin{small}(System call/Software transactional memory).\end{small}}
+
+	\resitem{\textbf{Stackable File System}(\textit{Operating System}). \begin{small}With Linux Kernal Module a new system call to verify and encrypt files was implemented. Designed and implemented a transparent and stackable, fan-out, two-branch compression filesystem in the VFS level(C/Shell/Kernel Programming).\end{small}}
+
+	\resitem{\textbf{Decaf}(\textit{Advanced Compiler Design}). \begin{small}An adopted OO language from Java and C++. Life circle involves Lexical Analysis, Syntatic Analysis, Semantic Analysis(type checking) and Code Genenration five stages(Bison/Flex/LLVM/C++/C/STL).\end{small}}
+
+	\resitem{\textbf{Bayesian Spam Filtering}(\textit{Artificial Intelligence}). \begin{small}Implemented and trained a Bayesian Classifier(Java/Ocaml/Python/Prolog)\end{small}}
+
+	\resitem{\textbf{Mobile Dictionary for Senegal Microfinance}(\textit{Mobile Computing Seminar}). \begin{small}Designed a prototype of mobile french dictionary application for E-Learning at Senegal and implemented its early phases (Kuix/J2ME/Android)\end{small}}
+
+
+
+\end{ressection}
+
+
+\begin{ressection}{Experience}
+
+	\begin{ressubsec}{Stony Brook University, Computer Science Department}{Stony Brook, NY}{Research Assistant under \textbf{Prof Rob Johnson}: Summer 2008--present}
+		\begin{small}\ressubitem{Develop a prepatch software prototype based on source to source analysis and transformation called \href{http://isis.poly.edu/snp2009/abs-rob.html}{\textit{Memsafe}} to protect memory safety(on CIL infrastructure\textbf{ C/C++/Ocaml/Shell Script}). Responsible for most instrumentation work.}
+		\ressubitem{Design and develop optimizers to improve performance of Memsafe(peephole, loop invariant inference, type inference and so on), one of which successfully cut the overhead down by half with the analysis of \textit{\textbf{inter-procedure type inference}}.}
+		\ressubitem{In charge of trouble shooting and maintain benchmark test bug free.}
+		\ressubitem{Participate other\textit{ \textbf{software security projects}}: Joe-E library taming, Deputy Enhancement and Provenance Tracking.}
+\end{small}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Huazhong University of Sci \& Tech, Computer Science Department.}{Wuhan, China}{Research Assistant under Prof Guohua Cui: Sep. 2004--Feb. 2006}
+		\begin{small}\ressubitem{Designed a Semi-fragile watermark algorithm for Image Authentication.}
+		\ressubitem{Involved in the design of a new Buyer-Seller watermarking protocol for copyright protection.}
+	    \ressubitem{Participated a China NSF Supported project of software bug finding tools based on reverse engineering.}\end{small}
+	\end{ressubsec}
+
+   \begin{ressubsec}{China IT Security Certification Center, IA R\&D center.}{Beijing, China}{Internship: March. 2006--May. 2006}
+\begin{small}		\ressubitem{Studied the GSP Microsoft windows source code}
+		\ressubitem{Assisted in discovering some buffer overflow and cross site scripting vulnerabilities.}\end{small}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Publication}
+	\resitem{\textit{\textbf{C Memsafe: a prepatch infrastructure for distributed honeynet}}, \begin{small} in preparision, \textbf{Jun Yuan}, Rob Johnson.\end{small}}
+
+	\resitem{\textit{\textbf{Pre-Patched Software}}, \begin{small}USENIX Workshop on Hot Topics in Security, Montreal, Canada, August 2009.Jianing Guo, \textbf{Jun Yuan}, Rob Johnson.\end{small}}
+
+	\resitem{\textit{\textbf{A TTP-Independent Watermarking Protocol for Copyright Protection in E-Commerce}}, \begin{small}Wuhan University Journal of Natural Sciences English Edition, Nov, 2006. Ting Luo, \textbf{Jun Yuan}, Fan Hong.\end{small}
+}
+
+	\resitem{\textit{\textbf{A Practical Multipurpose Color Image Watermarking Algorithm for Image Authentication}}, \begin{small}Proceedings of IEEE International Conference on Digital Telecommunications(ICDT06), IEEE Computer Society,Nov, 2006. \textbf{Jun Yuan}, Yijia Zhang, Guohua Cui\end{small}
+}
+
+	\resitem{\textit{\textbf{An Analysis of the Quantization Model of Watermarking In Transform Domain}}, \begin{small}Journal of Computer Engineering and Applications, 2005, volume 41(in Chinese). Guohua Cui, \textbf{Jun Yuan}\end{small}
+}
+
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Awards}
+\resitem{\begin{small}2007 New Graduate students Fellowship, Stony Brook University.\end{small}}
+\resitem{\begin{small}2004 Excellent Bachelor thesis prize in Hubei Province.\end{small}}
+\resitem{\begin{small}2000-2003 Tri-Top students Merit Award, Huazhong University of Science \& Technology.\end{small}}
+\resitem{\begin{small}2004-2006 Graduate students Tuition Fellowship, Huazhong University of Science \& Technology.\end{small}}
+\resitem{\begin{small}2005-2006 Outstanding Graduate Student Award,Huazhong University of Science \& Technology.\end{small}}
+\end{ressection}
+
+
+\end{document}
