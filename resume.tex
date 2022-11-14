@@ -1,11 +1,12 @@
 % Xiang Cai's Resume
 % Created: Oct. 22 2010
-% Last Modified: Nov. 10 2022
+% Last Modified: Nov. 14 2022
 
 \documentclass[11pt,oneside]{article}
 \usepackage{geometry}
 \usepackage{verbatim}
 \usepackage{xspace}
+\usepackage{float}
 \usepackage[T1]{fontenc}
 \usepackage[colorlinks=false,linkcolor=black]{hyperref}
 \def\pdfBorderAttrs{/Border [0 0 0] } 
@@ -19,7 +20,7 @@
 \setlength{\tabcolsep}{0in}
 
 % Name and contact information
-\newcommand{\name}{Xiang Cai\xspace}
+\newcommand{\name}{Xiang Cai, Ph.D.\xspace}
 \newcommand{\addrlinea}{24 Iroquois Rd\xspace}
 \newcommand{\addrlineb}{Arlington, MA, 02476, USA\xspace}
 \newcommand{\phone}{\hfill \textbf{Mobile: }(631)680-8544\xspace}
@@ -33,7 +34,7 @@
 
 % This defines how the name looks
 \newcommand{\bigname}[1]{
-	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+	\begin{center}\fontfamily{phv}\Huge{#1}\end{center}
 }
 
 % This defines contact info style
@@ -225,45 +226,49 @@ Xiang Cai
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Work Experience}
     \vspace{-5pt}
-    \item
-        {\fontfamily{serif}\selectfont\Large\bf{{Twitter}\hfill{Cambridge, MA}}}\vspace{3pt} \\
-        {\emph{\textbf{Senior Software Engineer} (Learning Streams Platform Team)} \hfill\emph{October 2021 -- November 2022}}
+    \begin{flushleft}
+        {\fontfamily{serif}\selectfont\Large\bf{{Twitter}\hfill{Cambridge, MA}}}
+    \end{flushleft}
+    \vspace{-16pt}
+    \item {\emph{\textbf{Senior Software Engineer} (Learning Streams Platform Team)} \hfill\emph{October 2021 -- November 2022}}
     \vspace{-4pt}
     \begin{itemize}
         \begin{small}
+            \resitem{Started the transition into the Tech Lead role.}
             \resitem{Oversaw a multi-team effort to integrate critical server side metadata into event logs, which provided better quality user signals to serve more relevant content to end users and ultimately improved our app engagement by 0.1\%.}
-            \resitem{Improved a data ingestion service that processes around 10 million events per second to ingest data in real time to Kafka.}
+            \resitem{Improved a data ingestion service that processes around 10 million events per second to ingest data in real time to Kafka. (\textbf{Scala, Kafka})}
     		\resitem{Collaborated with multiple cross-functional teams and finished a multi-year effort to deprecate an event logging service, cutting the cost by \$30,000 per month.}
-    		\resitem{Designed and implemented a self-serving data governance service that is essential for event ownership management, user privacy and traffic control. (Scala, MySQL.)}
-    		\resitem{Contributed to the design and implementation of a real-time event ingestion pipeline that provides critical data to analytic systems and ML model training downstream. (Scala, Kafka, BigQuery, Pubsub, Terraform.)}
+    		\resitem{Designed and implemented a self-serving data governance service that is essential for event ownership management, user privacy and traffic control. (\textbf{Scala, MySQL.})}
+    		\resitem{Contributed to the design and implementation of a real-time event ingestion pipeline that provides critical data to analytic systems and ML model training downstream. (\textbf{Scala, Kafka, BigQuery, PubSub, Terraform.})}
     	\end{small}
 	\end{itemize}
 	
-    {\emph{\textbf{Senior Software Engineer} (Video Data Infrastructure Team)} \hfill\emph{December 2019 -- October 2021}} \\
-    {\emph{\textbf{Software Engineer II} (Video Data Infrastructure Team)} \hfill\emph{April 2018 -- December 2019}}
+    \item {\emph{\textbf{Senior Software Engineer} (Video Data Infrastructure Team)} \hfill\emph{December 2019 -- October 2021}}\vspace{-8pt}
+    \item {\emph{\textbf{Software Engineer II} (Video Data Infrastructure Team)} \hfill\emph{April 2018 -- December 2019}}
     \vspace{-4pt}
     \begin{itemize}
         \begin{small}
-            \resitem{Prototyped a metrics computation PoC using Airflow running on GCP. (Python)}
-    		\resitem{Contributed to the design and implementation of moving the media event aggregation infrastructure from on-prem to GCP. (Dataflow, BigQuery, BigTable, Pubsub.)}
-    		\resitem{Oversaw the Personal Data Protection work on the VDI team and made sure the 10+ services and datasets we own are compliant with global regulation laws. (GDPR, etc.)}
+            \resitem{Prototyped a metrics computation PoC using Airflow running on GCP. (\textbf{Python})}
+    		\resitem{Contributed to the design and implementation of moving the media event aggregation infrastructure from on-prem to GCP. (\textbf{Dataflow, BigQuery, BigTable, PubSub.})}
+    		\resitem{Oversaw the Personal Data Protection work on the VDI team and made sure the 10+ services and datasets we own were compliant with global regulation laws. (GDPR, etc.)}
     	\end{small}
 	\end{itemize}
 	
-	{\emph{\textbf{Tech Lead, Software Engineer II} (Media Monetization Team)} \hfill\emph{March 2017 -- April 2018}} \\
-    {\emph{\textbf{Software Engineer II} (Media Monetization Team)} \hfill\emph{September 2014 -- March 2017}}
+	\item {\emph{\textbf{Tech Lead, Software Engineer II} (Media Monetization Team)} \hfill\emph{March 2017 -- April 2018}}\vspace{-8pt}
+    \item {\emph{\textbf{Software Engineer II} (Media Monetization Team)} \hfill\emph{September 2014 -- March 2017}}
     \vspace{-4pt}
     \begin{itemize}
         \begin{small}
-    		\resitem{Built, maintained and improved services that were responsible for computing and serving various video metrics, including the video view counts shown on Twitter videos. (Scala, Scalding.)}
-    		\resitem{Designed and implemented a data validation system that monitored video event quality. (Python, Presto.)}
+    		\resitem{Built, maintained and improved services that were responsible for computing and serving various video metrics, including the video view counts shown on Twitter videos. (\textbf{Scala, Scalding.})}
+    		\resitem{Designed and implemented a data validation system that monitored video event quality. (\textbf{Python, Presto.})}
     	\end{small}
 	\end{itemize}
 	
-	\vspace{-5pt}
-    \item
-        {\fontfamily{serif}\selectfont\Large\bf{{Hewlett-Packard Labs}\hfill{Princeton, NJ}}}\vspace{3pt} \\
-        {\emph{Research Associate Intern} \hfill\emph{June 2012 -- August 2012}}
+	\vspace{5pt}
+    {\fontfamily{serif}\selectfont\Large\bf{{Hewlett-Packard Labs}\hfill{Princeton, NJ}}}
+    \vspace{-2pt}
+    \item 
+        {\emph{\textbf{Research Associate Intern}}}\hfill\emph{June 2012 -- August 2012}
     \vspace{-4pt}
     \begin{itemize}
         \begin{small}
@@ -273,13 +278,13 @@ Xiang Cai
 	\end{itemize}
 \end{ressection}
 
+\vspace{5pt}
 \begin{ressection_empty}{Technical Skills}
-\vspace{-20pt}
-\begin{table}[h]
+\vspace{-10pt}
+\begin{table}[H]
 \begin{tabular}[h]{p{0.4\textwidth}p{0.6\textwidth}}
-
 \textbf{Programming Languages:} & \textbf{Scala} (proficient, 8+ years of experience), \textbf{Python} (proficient, 3+ years of experience), \textbf{C/C++, Java, MySQL} (intermediate), \textbf{shell} (beginner)	\\[1.5pt]
-\textbf{Platforms \& Development Tools:} & BigQuery, BigTable, Kafka, Pubsub, MapReduce, git, Intellij  \\[1.5pt]
+\textbf{Platforms \& Development Tools:} & BigQuery, BigTable, Kafka, PubSub, MapReduce, git, IntelliJ  \\[1.5pt]
 \textbf{Background:} & Big Data Analysis, Data Pipeline, Machine Learning, Security and Privacy \\
 \end{tabular}
 \end{table}
@@ -298,15 +303,18 @@ Xiang Cai
 
 \end{ressection_empty}
 
+\vspace{40pt}
 \begin{ressection}{Education}
     \vspace{-5pt}
-    \item
-        {\fontfamily{serif}\selectfont\Large\bf{{Stony Brook University}\hfill{Stony Brook, NY}}}\vspace{3pt} \\
-        {\emph{\textbf{Ph.D.} in Computer Science (GPA:3.93/4)} \hfill\emph{September 2007 -- August 2014}}
+    \begin{flushleft}
+        {\fontfamily{serif}\selectfont\Large\bf{{Stony Brook University}\hfill{Stony Brook, NY}}}
+    \end{flushleft}
+    \vspace{-15pt}
+    \item {\emph{\textbf{Ph.D.} in Computer Science (GPA:3.93/4)} \hfill\emph{September 2007 -- August 2014}}
     \vspace{-4pt}
     \begin{itemize}
         \begin{small}
-            \resitem{Research focuses on \textbf{System Security, Network Security} and \textbf{Privacy.}}
+            \resitem{Research focused on \textbf{System Security, Network Security} and \textbf{Privacy.}}
     	\end{small}
 	\end{itemize}
 	
@@ -334,10 +342,12 @@ Xiang Cai
 %		}                                                                     
 %	\end{ressubsec}
 
-    \vspace{-5pt}
-    \item
-        {\fontfamily{serif}\selectfont\Large\bf{{University of Sciences \& Technology of China}\hfill{Hefei, Anhui, China}}}\vspace{3pt} \\
-        {\emph{\textbf{B.E.} in Computer Science (GPA:3.83/4.3)} \hfill\emph{September 2003 - July 2007}}
+    \vspace{-10pt}
+    \begin{flushleft}
+        {\fontfamily{serif}\selectfont\Large\bf{{University of Sciences \& Technology of China}\hfill{Hefei, Anhui, China}}}
+    \end{flushleft}
+    \vspace{-15pt}
+    \item {\emph{\textbf{B.E.} in Computer Science (GPA:3.83/4.3)} \hfill\emph{September 2003 - July 2007}}
 
 %	\vspace{-4pt}
 %	\begin{ressubsec_empty}{University of Sciences \& Technology of
