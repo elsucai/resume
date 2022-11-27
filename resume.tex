@@ -1,6 +1,6 @@
 % Xiang Cai's Resume
 % Created: Oct. 22 2010
-% Last Modified: Nov. 14 2022
+% Last Modified: Nov. 27 2022
 
 \documentclass[11pt,oneside]{article}
 \usepackage{geometry}
@@ -21,8 +21,9 @@
 
 % Name and contact information
 \newcommand{\name}{Xiang Cai, Ph.D.\xspace}
-\newcommand{\addrlinea}{24 Iroquois Rd\xspace}
-\newcommand{\addrlineb}{Arlington, MA, 02476, USA\xspace}
+%\newcommand{\addrlinea}{24 Iroquois Rd\xspace}
+\newcommand{\addrlineb}{\textbf{Address: }Arlington, MA, 02476, USA\xspace}
+\newcommand{\linkedin}{\textbf{LinkedIn: }\href{https://www.linkedin.com/in/xiang-cai-2906924b/}{Xiang Cai}\xspace}
 \newcommand{\phone}{\hfill \textbf{Mobile: }(631)680-8544\xspace}
 \newcommand{\email}{\hfill \textbf{Email: }xcai.stonybrook@gmail.com\xspace}
 \newcommand{\cvphone}{\textit{(631)680-8544}\xspace}
@@ -210,8 +211,8 @@ Xiang Cai
 \vspace{-6pt}
 \begin{table}[h]
 \begin{tabular}[h]{p{0.5\textwidth}p{0.5\textwidth}}
-\addrlinea & \phone \\
-\addrlineb & \email \\
+\addrlineb & \phone \\
+\linkedin & \email \\
 \end{tabular}
 \end{table}
 
@@ -230,37 +231,30 @@ Xiang Cai
         {\fontfamily{serif}\selectfont\Large\bf{{Twitter}\hfill{Cambridge, MA}}}
     \end{flushleft}
     \vspace{-16pt}
-    \item {\emph{\textbf{Senior Software Engineer} (Learning Streams Platform Team)} \hfill\emph{October 2021 -- November 2022}}
+    \item {\emph{\textbf{Senior Software Engineer}} \hfill\emph{December 2019 -- November 2022}}
     \vspace{-4pt}
     \begin{itemize}
         \begin{small}
-            \resitem{Started the transition into the Tech Lead role.}
-            \resitem{Oversaw a multi-team effort to integrate critical server side metadata into event logs, which provided better quality user signals to serve more relevant content to end users and ultimately improved our app engagement by 0.1\%.}
+            \resitem{Worked on several backend teams focusing on data processing and metrics computing.}
+            \resitem{Acted as the functional Tech Lead for a team of four engineers.}
+            \resitem{Oversaw a multi-team effort to integrate critical server side metadata into event logs. The project helped improve the team velocity and provided better quality user signals to serve more relevant content to end users and ultimately improved our app engagement by 0.1\%.}
             \resitem{Improved a data ingestion service that processes around 10 million events per second to ingest data in real time to Kafka. (\textbf{Scala, Kafka})}
-    		\resitem{Collaborated with multiple cross-functional teams and finished a multi-year effort to deprecate an event logging service, cutting the cost by \$30,000 per month.}
-    		\resitem{Designed and implemented a self-serving data governance service that is essential for event ownership management, user privacy and traffic control. (\textbf{Scala, MySQL.})}
-    		\resitem{Contributed to the design and implementation of a real-time event ingestion pipeline that provides critical data to analytic systems and ML model training downstream. (\textbf{Scala, Kafka, BigQuery, PubSub, Terraform.})}
-    	\end{small}
-	\end{itemize}
-	
-    \item {\emph{\textbf{Senior Software Engineer} (Video Data Infrastructure Team)} \hfill\emph{December 2019 -- October 2021}}\vspace{-8pt}
-    \item {\emph{\textbf{Software Engineer II} (Video Data Infrastructure Team)} \hfill\emph{April 2018 -- December 2019}}
-    \vspace{-4pt}
-    \begin{itemize}
-        \begin{small}
+            \resitem{Presented the improved data ingestion pipeline to org leadership during all-hands meetings.}
+    	\resitem{Collaborated with multiple cross-functional teams and finished a multi-year effort to deprecate an event logging service, cutting the cost by \$30,000 per month.}
+    	\resitem{Designed and implemented a self-serving data governance service that is essential for event ownership management, user privacy and traffic control. (\textbf{Scala, MySQL.})}
+    	\resitem{Contributed to the design and implementation of a real-time event ingestion pipeline that provides critical data to analytic systems and ML model training downstream. (\textbf{Scala, Kafka, BigQuery, PubSub, Terraform.})}
             \resitem{Prototyped a metrics computation PoC using Airflow running on GCP. (\textbf{Python})}
-    		\resitem{Contributed to the design and implementation of moving the media event aggregation infrastructure from on-prem to GCP. (\textbf{Dataflow, BigQuery, BigTable, PubSub.})}
-    		\resitem{Oversaw the Personal Data Protection work on the VDI team and made sure the 10+ services and datasets we own were compliant with global regulation laws. (GDPR, etc.)}
+    	\resitem{Contributed to the design and implementation of moving the media event aggregation infrastructure from on-prem to GCP. (\textbf{Dataflow, BigQuery, BigTable, PubSub.})}
     	\end{small}
 	\end{itemize}
 	
-	\item {\emph{\textbf{Tech Lead, Software Engineer II} (Media Monetization Team)} \hfill\emph{March 2017 -- April 2018}}\vspace{-8pt}
-    \item {\emph{\textbf{Software Engineer II} (Media Monetization Team)} \hfill\emph{September 2014 -- March 2017}}
+	\item {\emph{\textbf{Tech Lead, Software Engineer II}} \hfill\emph{September 2014 -- December 2019}}
     \vspace{-4pt}
     \begin{itemize}
         \begin{small}
-    		\resitem{Built, maintained and improved services that were responsible for computing and serving various video metrics, including the video view counts shown on Twitter videos. (\textbf{Scala, Scalding.})}
-    		\resitem{Designed and implemented a data validation system that monitored video event quality. (\textbf{Python, Presto.})}
+            \resitem{Oversaw the Personal Data Protection work on the Video Data Infrastructure team and made sure the 10+ services and datasets we own were compliant with global regulation laws. (GDPR, etc.)}
+    	\resitem{Built, maintained and improved services that were responsible for computing and serving various video metrics, including the video view counts shown on Twitter videos. (\textbf{Scala, Scalding.})}
+    	\resitem{Designed and implemented a data validation system that monitored video event quality. (\textbf{Python, Presto.})}
     	\end{small}
 	\end{itemize}
 	
@@ -279,31 +273,6 @@ Xiang Cai
 \end{ressection}
 
 \vspace{5pt}
-\begin{ressection_empty}{Technical Skills}
-\vspace{-10pt}
-\begin{table}[H]
-\begin{tabular}[h]{p{0.4\textwidth}p{0.6\textwidth}}
-\textbf{Programming Languages:} & \textbf{Scala} (proficient, 8+ years of experience), \textbf{Python} (proficient, 3+ years of experience), \textbf{C/C++, Java, MySQL} (intermediate), \textbf{shell} (beginner)	\\[1.5pt]
-\textbf{Platforms \& Development Tools:} & BigQuery, BigTable, Kafka, PubSub, MapReduce, git, IntelliJ  \\[1.5pt]
-\textbf{Background:} & Big Data Analysis, Data Pipeline, Machine Learning, Security and Privacy \\
-\end{tabular}
-\end{table}
-\vspace{-8pt}
-
-%	\vspace{-4pt}
-%	\resitem{
-%		Operating Systems: \textbf{Linux (Ubuntu)} (4+ years of experience)
-%	}
-
-%	\resitem{Broad and diversified background in \textbf{System Programming},
-%		\textbf{Algorithms}, \textbf{Software Development} and
-%			\textbf{Computer Security}. Specialization in \textbf{System
-%				Security} and \textbf{Network Security}. Excellent troubleshooting/problem solving skills.
-%	}
-
-\end{ressection_empty}
-
-\vspace{40pt}
 \begin{ressection}{Education}
     \vspace{-5pt}
     \begin{flushleft}
@@ -315,8 +284,9 @@ Xiang Cai
     \begin{itemize}
         \begin{small}
             \resitem{Research focused on \textbf{System Security, Network Security} and \textbf{Privacy.}}
-    	\end{small}
-	\end{itemize}
+            \resitem{Selected publications are listed on this \href{https://scholar.google.com/citations?user=aLLW2YIAAAAJ&hl=en&oi=ao}{Google Scholar page}.}
+        \end{small}
+    \end{itemize}
 	
 	%\begin{ressubsec}{Stony Brook University}{}{\emph{\textbf{Ph.D.} in Computer Science (GPA:3.93/4)} \hfill\emph{September 2007 -- August 2014}}
 	%	\ressubitem{Research focuses on \textbf{System Security, Network Security} and \textbf{Privacy.}
@@ -357,6 +327,30 @@ Xiang Cai
 
 
 \end{ressection}
+
+\begin{ressection_empty}{Technical Skills}
+\vspace{-10pt}
+\begin{table}[H]
+\begin{tabular}[h]{p{0.4\textwidth}p{0.6\textwidth}}
+\textbf{Programming Languages:} & \textbf{Scala} (proficient, 8+ years of experience), \textbf{Python} (proficient, 3+ years of experience), \textbf{C/C++, Java, MySQL} (intermediate), \textbf{shell} (beginner)	\\[1.5pt]
+\textbf{Platforms \& Development Tools:} & BigQuery, BigTable, Kafka, PubSub, MapReduce, git, IntelliJ  \\[1.5pt]
+\textbf{Background:} & Distributed System, Big Data Analysis, Data Pipeline, Security and Privacy \\
+\end{tabular}
+\end{table}
+\vspace{-8pt}
+
+%	\vspace{-4pt}
+%	\resitem{
+%		Operating Systems: \textbf{Linux (Ubuntu)} (4+ years of experience)
+%	}
+
+%	\resitem{Broad and diversified background in \textbf{System Programming},
+%		\textbf{Algorithms}, \textbf{Software Development} and
+%			\textbf{Computer Security}. Specialization in \textbf{System
+%				Security} and \textbf{Network Security}. Excellent troubleshooting/problem solving skills.
+%	}
+
+\end{ressection_empty}
 
 \begin{comment}
 \begin{ressection}{Research Projects}
@@ -580,9 +574,9 @@ Xiang Cai
 \end{ressection}
 \end{comment}
 
+\begin{comment}
 \begin{ressection}{Publications}
     \resitem{Selected publications are listed on this \href{https://scholar.google.com/citations?user=aLLW2YIAAAAJ&hl=en&oi=ao}{Google Scholar page}.}
-\begin{comment}
 	\resitem{Glove: A Bespoke Website Fingerprinting Defense. \begin{small} Rishab Nithyanand, \textbf{Xiang Cai} and Rob Johnson. \textit{Workshop on Privacy in the Electronic Society, Scottsdale, AZ, November 2014}.
 	\end{small}}
 	
@@ -606,8 +600,8 @@ Xiang Cai
 				Oakland, CA, May 2009}. 
 	%			(Acceptance rate: 10.2\%, 26/254)
 				\end{small}}
-\end{comment}
 \end{ressection}
+\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 
